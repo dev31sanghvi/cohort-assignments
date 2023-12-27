@@ -1,0 +1,51 @@
+<!-- (Hint: setTimeout) -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="counter">0</div>
+
+    <button onclick="increment()">Increment</button>
+    <button onclick="decrement()">Decrement</button>
+    <button onclick="reset()">Reset</button>
+
+
+
+
+    <script>
+
+        let count=0;
+let timeout;
+
+//this will update the counter
+        function update(){
+            document.getElementById('counter').innerHTML=count;
+
+        }
+// function to increment the couter
+        function increment(){
+            count++;
+            update();
+timeout=setTimeout(increment,1000);
+
+        }
+// function to decrement counter
+        function decrement(){
+            count--;
+            update();
+
+            timeout=setTimeout(decrement,1000);
+        }
+//reset function
+        function reset(){
+            count=0;
+            update();
+
+            clearTimeout(timeout);
+        }
+    </script>
+</body>
+</html>
