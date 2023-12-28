@@ -5,6 +5,29 @@
  */
 
 function sleep(milliseconds) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve();
+    }, milliseconds);
+  });
 }
 
 module.exports = sleep;
+
+console.log("start");
+
+delay(5000)
+  .then(() => {
+    console.log("5 sec later");
+  })
+
+  .then(() => delay(3000))
+  .then(() => {
+    console.log("after 3 more sec ");
+  });
+
+
+  console.log('over');
+
+
+
