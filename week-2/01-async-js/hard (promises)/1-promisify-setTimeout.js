@@ -3,6 +3,21 @@
 */
 
 function wait(n) {
+    return new promise((resolve,reject)=>{
+        if(n<0){
+            reject("this case is not possible");
+        }
+        else{
+            setTimeout(()=>{
+                resolve('good to go after ${n} seconds');
+            }),seconds*1000;
+        }
+
+    });
+
 }
 
 module.exports = wait;
+
+
+
