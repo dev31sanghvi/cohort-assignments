@@ -15,7 +15,7 @@
 
 const fs = require('fs');
 
-const filePath = 'yourFileName.txt'; // file path
+const filePath = '/Desktop/Dev.txt'; // file path
 
 // Read the file
 const content = fs.readFileSync(filePath, 'utf8');
